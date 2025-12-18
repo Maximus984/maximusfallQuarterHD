@@ -6,14 +6,18 @@
         </title>
     </head>
 
-    <body>
-        {% block navbar %}{% endblock %}
+    <body class="bg-dark">
+        <div class="container">
+            {% block navbar %}{% endblock %}
+        </div>
 
-        <div class="container mt-4">
+        <div class="container mt">
             {% block content %}{% endblock %}
         </div>
 
-        {% block footer %}{% endblock %}
+        <div class="container mt">
+            {% block footer %}{% endblock %}
+        </div>
 
         <script src="{{url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
     </body>
